@@ -1,0 +1,144 @@
+.col-md-6 {
+    margin-top: 20px;
+}
+
+.carousel {
+    width: 100%;
+    height: 300px;
+}
+
+#image {
+    width: 100%;
+    height: 75%;
+    border-radius: 10px;
+}
+
+mat-card {
+    margin: auto;
+    border-radius: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid cadetblue;
+}
+
+ng-template {
+    margin-top: 30px;
+}
+
+mat-card-title,
+mat-card-subtitle,
+mat-card-footer {
+    text-align: center;
+}
+
+mat-card-title {
+    font-size: large;
+}
+
+mat-card-subtitle {
+    font-size: medium;
+}
+
+mat-card-subtitle>span {
+    color: #129CF3;
+}
+
+mat-card-content {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    font-weight: 600;
+}
+
+.plot-img {
+    width: 90%;
+    margin: 2% 5% 0 5%;
+    border: 2px solid firebrick;
+    border-radius: 10px;
+}
+
+.form-input {
+    display: block;
+}
+
+mat-spinner {
+    margin: auto;
+}
+
+h2 {
+    color: black;
+    font-size: 52.52px;
+    line-height: 95px;
+    font-weight: 400;
+    margin: 0 0 40px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+img.img-thumbnail {
+    border: 2px solid #129CF3;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.title {
+    color: #129CF3;
+    font-style: italic;
+    font-weight: 300;
+    margin: auto;
+    padding: 6px;
+}
+
+.icon {
+    position: relative;
+    border: 3px dashed #8C8C8C;
+    border-radius: 50%;
+}
+
+.icon img {
+    display: block;
+    margin: auto;
+}
+
+.work-label p {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: black;
+}
+
+.sdlc-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: .3s ease-in-out;
+}
+
+.icon:hover .overlay {
+    transform: scale(1)
+}
+
+.icon-description {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

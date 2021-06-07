@@ -1,0 +1,215 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src=".\..\assets\BSE.jpg" class="d-block w-100 carousel" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src=".\..\assets\NIKKEI.jpg" class="d-block w-100 carousel" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src=".\..\assets\NYSE.jpg" class="d-block w-100 carousel" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="container">
+    <div class="row set-height">
+        <div class="col-md-6 ">
+            <img id="image" src=".\..\assets\background.jpg">
+        </div>
+        <div class="col-md-6 ">
+            <mat-card>
+                <mat-card-title>
+                    Welcome to our app
+
+                </mat-card-title>
+                <mat-card-content>
+                    <form [formGroup]="stockForm" (ngSubmit)="submit()">
+                        <mat-form-field class="form-input">
+                            <mat-label>Enter Company's ticker: </mat-label>
+                            <input formControlName="ticker" matInput>
+                            <mat-error>
+                                <span *ngIf="!stockForm.get('ticker').valid && stockForm.get('ticker').touched">Please enter Company's ticker</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class='form-input'>
+                            <input formControlName="startDate" matInput [matDatepicker]='start' placeholder='Enter start date: '>
+                            <mat-datepicker-toggle matSuffix [for]='start'></mat-datepicker-toggle>
+                            <mat-datepicker touchUi='true' #start></mat-datepicker>
+                            <mat-error>
+                                <span *ngIf="!stockForm.get('startDate').valid && stockForm.get('startDate').touched">Please enter valid start date</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class='form-input'>
+                            <input formControlName="endDate" matInput [matDatepicker]='end' placeholder='Enter end date: '>
+                            <mat-datepicker-toggle matSuffix [for]='end'></mat-datepicker-toggle>
+                            <mat-datepicker touchUi='true' #end></mat-datepicker>
+                            <mat-error>
+                                <span *ngIf="!stockForm.get('endDate').valid && stockForm.get('endDate').touched">Please enter valid end date</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="form-input">
+                            <mat-select formControlName='model' placeholder="Select Model" [(value)]="model">
+                                <mat-option>--- Select Any ---</mat-option>
+                                <mat-option value="PPO">Principal Power Optimization</mat-option>
+                                <mat-option value="A2C">Advantage Actor Critic</mat-option>
+                            </mat-select>
+                            <mat-error>
+                                <span *ngIf="!stockForm.get('model').valid && stockForm.get('model').touched">Please select the option</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <button type="submit" mat-raised-button color="accent" [disabled]='!stockForm.valid'>Submit</button>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+    </div>
+</div>
+
+<div *ngIf="ready">
+    <div *ngIf="!isLoading; then spinner else display" class="content"></div>
+</div>
+
+
+<ng-template #spinner>
+    <mat-spinner></mat-spinner>
+</ng-template>
+
+<ng-template #display>
+    <mat-card>
+        <mat-card-title>{{stockForm.value.ticker}}</mat-card-title>
+        <mat-card-subtitle>Visualization of Technical Indicators</mat-card-subtitle>
+        <img mat-card-image [src]=image1 class="plot-img">
+        <mat-card-footer>{{stockForm.value.startDate| date}} - {{stockForm.value.endDate|date}}</mat-card-footer>
+    </mat-card>
+    <mat-card>
+        <mat-card-title>{{stockForm.value.ticker}}</mat-card-title>
+        <mat-card-subtitle>Visualization of Sentiment Scores</mat-card-subtitle>
+        <img mat-card-image [src]=image2 class="plot-img">
+    </mat-card>
+    <mat-card>
+        <mat-card-title>{{stockForm.value.ticker}}</mat-card-title>
+        <mat-card-subtitle>Final Result</mat-card-subtitle>
+        <img mat-card-image [src]=image3 class="plot-img">
+        <mat-card-content class="text-center">If we {{this.position}} at this particular moment, there will be chance of profit equals to {{this.profit|number:'1.2-2'}} in the scale of 0-1</mat-card-content>
+    </mat-card>
+</ng-template>
+
+<div class="container">
+    <div class="row">
+        <h2 class="text-center">Meet our Team</h2>
+        <div class="col-md-3">
+            <mat-card>
+                <img src="./../assets/aditya.jpg" mat-card-image class='img-thumbnail'>
+                <mat-card-title class="title">Aditya Kumar</mat-card-title>
+                <mat-card-subtitle>Computer Science Engineer<br><span>Dr. D.Y. Patil Institute of Technology</span></mat-card-subtitle>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card>
+                <img src="./../assets/kunal.jpg" mat-card-image class='img-thumbnail'>
+                <mat-card-title class="title">Kunal Tickoo</mat-card-title>
+                <mat-card-subtitle>Computer Science Engineer<br><span>Dr. D.Y. Patil Institute of Technology</span></mat-card-subtitle>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card>
+                <img src="./../assets/mukul.jpg" mat-card-image class='img-thumbnail'>
+                <mat-card-title class="title">Mukul Goel</mat-card-title>
+                <mat-card-subtitle>Computer Science Engineer<br><span>Dr. D.Y. Patil Institute of Technology</span></mat-card-subtitle>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card>
+                <img src="./../assets/rishabh.jpg" mat-card-image class='img-thumbnail'>
+                <mat-card-title class="title">Rishabh Shukla</mat-card-title>
+                <mat-card-subtitle>Computer Science Engineer<br><span>Dr. D.Y. Patil Institute of Technology</span></mat-card-subtitle>
+            </mat-card>
+        </div>
+    </div>
+    <div class='row'>
+        <h2 class="text-center">Meet our Guide</h2>
+        <div class="col-md-6">
+            <mat-card>
+                <img src="./../assets/female.jpg" mat-card-image class='img-thumbnail'>
+                <mat-card-title class="title">Mrs. Archana Chaudhari</mat-card-title>
+                <mat-card-subtitle>Assistant Professor<br><span>Dr. D.Y. Patil Institute of Technology</span></mat-card-subtitle>
+            </mat-card>
+
+        </div>
+        <div class="col-md-6">
+            <mat-card>
+                <img src="./../assets/male.jpg" mat-card-image class='img-thumbnail'>
+                <mat-card-title class="title">Mr. Anil Kumar Gupta</mat-card-title>
+                <mat-card-subtitle>Senior IEEE Member<br><span>CDAC</span></mat-card-subtitle>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h2 class="text-center">How do we work</h2>
+        <div class="col-md-3 work-label">
+            <div class="icon">
+                <img src='./../assets/research.png' class='sdlc-image'>
+                <div class=overlay>
+                    <p class="icon-description">
+                        Identify,<br>Select,<br>Process and <br> Analyze
+                    </p>
+                </div>
+            </div>
+            <p>Research</p>
+        </div>
+        <div class="col-md-3 work-label">
+            <div class="icon">
+                <img src='./../assets/strategy.png' class='sdlc-image'>
+                <div class=overlay>
+                    <p class="icon-description">
+                        Build strategy to fulfill <br> requirements.
+                    </p>
+                </div>
+            </div>
+            <p>Strategy</p>
+        </div>
+        <div class="col-md-3 work-label">
+            <div class="icon">
+                <img src='./../assets/develop.png' class='sdlc-image'>
+                <div class=overlay>
+                    <p class="icon-description">
+                        Development process <br> start,<br> and remain in touch with Guide.
+                    </p>
+                </div>
+            </div>
+            <p>Develop</p>
+        </div>
+        <div class="col-md-3 work-label">
+            <div class="icon">
+                <img src='./../assets/optimize.png' class='sdlc-image'>
+                <div class=overlay>
+                    <p class="icon-description">
+                        Optimization is always required<br> to adapt <br> in environment.
+                    </p>
+                </div>
+            </div>
+            <p>Optimize</p>
+        </div>
+
+    </div>
+</div>

@@ -226,6 +226,8 @@ def prediction(data,modelName,ticker):
                 break
         plt.figure(figsize=(15,6))
         plt.cla()
+        plt.xlabel('Nth Day')
+        plt.ylabel('Adj Close')
         env.render_all()
         
         Image_path=os.path.join(r'E:\stock\FrontEnd\src\assets','images')
