@@ -26,20 +26,8 @@
     <img src="/Images/image9.png"/>
 </p>
 
-### Lets Get Started
-  
-      git clone git@github.com:adityaxtalk/Stock-Market-Prediction-Web-App.git
-      1. cd FrontEnd
-          1.1 npm install
-          1.2 ng serve --live-reload=false
-      2. 
-          2.1 pip install stable-baselines
-          2.2 pip install Django
-          2.3 pip install tensorflow==1.15.0
-          2.4 pip install gym-anytrading
-          2.5 python manage.py runserver
- 
-### Questions?
+# Copyright
+    
+    Copyright (C) 2021 Aditya Kumar, Mukul Goel, Rishabh Shukla, Kunal Tickoo
 
-Feel free to create new issue: https://github.com/adityaxtalk/Stock-Market-Prediction-Web-App/issues
-          
+
