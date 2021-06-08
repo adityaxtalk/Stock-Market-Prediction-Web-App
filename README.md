@@ -13,10 +13,11 @@
 ##Demo Images
 
 <p style="float:left>
-    <img src="/Images/image1.png" />
-    <img src="/Images/image2.png"  />
-    <img src="/Images/image3.png"  />
-    <img src="/Images/image4.png"  />
+    <img src="/Images/image1.png"/>
+    <img src="/Images/image2.png"/>
+    <img src="/Images/image3.png" />
+    <img src="/Images/image4.png" />
+    <img src="/Images/image5.png"/>
 </p>
 
 ### Lets Get Started
