@@ -15,11 +15,12 @@
 
 ##Demo Images
 
-<p style="display:grid; grid-gap:10px; grid-template-columns ">
+<p style="display:grid; grid-gap:10px; grid-template-columns:auto auto ">
     <img src="/Images/image1.png"/>
     <img src="/Images/image2.png"/>
     <img src="/Images/image3.png" />
     <img src="/Images/image4.png" />
+    <img src="/Images/image5.png"/>
     <img src="/Images/image7.png"/>
     <img src="/Images/image8.png"/>
     <img src="/Images/image9.png"/>
