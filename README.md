@@ -28,6 +28,6 @@
 
 # Copyright
     
-    <h1>Copyright (C) 2021 Aditya Kumar, Mukul Goel, Rishabh Shukla, Kunal Tickoo<h1>
+    Copyright (C) 2021 Aditya Kumar, Mukul Goel, Rishabh Shukla, Kunal Tickoo
 
 
