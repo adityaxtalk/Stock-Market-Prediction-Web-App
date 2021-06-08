@@ -9,10 +9,13 @@
    2. stable_baselines 2.10.2
    3. tensorflow 1.15.0
    4. gym_anytrading
+   5. Selenium 
+   6. Chrome Driver
+   7. TA-lib
 
 ##Demo Images
 
-<p style="display:grid; grid-gap:10px; ">
+<p style="display:grid; grid-gap:10px; grid-template-columns ">
     <img src="/Images/image1.png"/>
     <img src="/Images/image2.png"/>
     <img src="/Images/image3.png" />
