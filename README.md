@@ -9,14 +9,22 @@
    2. stable_baselines 2.10.2
    3. tensorflow 1.15.0
    4. gym_anytrading
+   5. Selenium 
+   6. Chrome Driver
+   7. TA-lib
 
 ##Demo Images
 
-<p style="float:left>
-    <img src="/Images/image1.png" />
-    <img src="/Images/image2.png"  />
-    <img src="/Images/image3.png"  />
-    <img src="/Images/image4.png"  />
+<p style="display:grid; grid-gap:10px; grid-template-columns ">
+    <img src="/Images/image1.png"/>
+    <img src="/Images/image2.png"/>
+    <img src="/Images/image3.png" />
+    <img src="/Images/image4.png" />
+    <img src="/Images/image5.png"/>
+    <img src="/Images/image6.png"/>
+    <img src="/Images/image7.png"/>
+    <img src="/Images/image8.png"/>
+    <img src="/Images/image9.png"/>
 </p>
 
 ### Lets Get Started
