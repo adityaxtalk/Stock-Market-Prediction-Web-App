@@ -21,11 +21,11 @@
 
 ### Lets Get Started
   
-      git clone git@github.com:adityaxtalk/.git
+      git clone git@github.com:adityaxtalk/Stock-Market-Prediction-Web-App.git
       1. cd FrontEnd
           1.1 npm install
           1.2 ng serve --live-reload=false
-      2. cd api
+      2. 
           2.1 pip install stable-baselines
           2.2 pip install Django
           2.3 pip install tensorflow==1.15.0
@@ -34,5 +34,5 @@
  
 ### Questions?
 
-Feel free to create new issue: https://github.com/adityaxtalk//issues
+Feel free to create new issue: https://github.com/adityaxtalk/Stock-Market-Prediction-Web-App/issues
           
