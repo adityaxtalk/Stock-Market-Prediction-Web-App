@@ -20,8 +20,6 @@
     <img src="/Images/image2.png"/>
     <img src="/Images/image3.png" />
     <img src="/Images/image4.png" />
-    <img src="/Images/image5.png"/>
-    <img src="/Images/image6.png"/>
     <img src="/Images/image7.png"/>
     <img src="/Images/image8.png"/>
     <img src="/Images/image9.png"/>
