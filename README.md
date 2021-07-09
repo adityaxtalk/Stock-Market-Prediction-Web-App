@@ -13,6 +13,11 @@
    6. Chrome Driver
    7. TA-lib
 
+##Copyright
+<p style="display:grid grid-template-columns:auto">
+    <img src="/Images/Copyright.jpeg">
+</p>    
+
 ## Demo Images
 
 <p style="display:grid; grid-gap:10px; grid-template-columns:auto auto ">
