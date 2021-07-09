@@ -13,7 +13,7 @@
    6. Chrome Driver
    7. TA-lib
 
-##Copyright
+## Copyright
 <p style="display:grid grid-template-columns:auto">
     <img src="/Images/Copyright.jpeg">
 </p>    
